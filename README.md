@@ -3,6 +3,8 @@ Send data from DHT22 to ThingSpeak using a Raspberry Pi and crontab
 
 Based on https://www.hackster.io/adamgarbo/raspberry-pi-2-iot-thingspeak-dht22-sensor-b208f4
 
+This is assuming your Pi is up and running with Raspbian, and that your DHT22 sensor is connected.
+
 First of all, run
 `sudo apt-get update`
 
