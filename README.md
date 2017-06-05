@@ -27,6 +27,15 @@ Then there's time to install this simple snippet of code.
 
 `git clone https://github.com/fmandal/dht22.git`
 
-If you'd like it to run every 5 minutes:
+Update with your API key and pin number for the DHT22:
+
+`cd dht22
+nano dht22.py`
+
+Change the config variables to reflect your values:
+`myAPI = "<API FROM THINGSPEAK>"
+pin = 4`
+
+If you'd like it to run every 5 minutes do so via crontab:
 `crontab -e 
 */5 * * * * python /home/pi/dht22/dht22.py > /dev/null`
