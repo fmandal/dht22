@@ -12,12 +12,12 @@ Then run
 `sudo apt-get install python-dev python-dev git`
 to install needed libraries.
 
-Then install the (Adafruit Python DHT library)[https://github.com/adafruit/Adafruit_Python_DHT]:
+Then install the [Adafruit Python DHT library](https://github.com/adafruit/Adafruit_Python_DHT):
 `git clone https://github.com/adafruit/Adafruit_Python_DHT.git 
 cd Adafruit_Python_DHT 
 sudo python setup.py install`
 
-You'll need a ThingSpeak channel, so (go create one)[http://thingspeak.com].
+You'll need a ThingSpeak channel, so [go create one](http://thingspeak.com).
 Name your channel whatever you like.
 Field 1 is for temperature, so name apropriately.
 Field 2 is for humidity, so name apropriately.
