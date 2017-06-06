@@ -10,7 +10,7 @@ import sys
 import Adafruit_DHT
 import urllib2
 
-myAPI = "<API FROM THINGSPEAK>"
+myAPI = "RIECGPK9X7DSKV2G"
 pin = 4
 
 def getSensorData():
