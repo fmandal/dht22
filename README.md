@@ -1,5 +1,5 @@
 # dht22
-Send data from DHT22 to ThingSpeak using a Raspberry Pi and crontab
+Send data from DHT22 to ThingSpeak using Python on a Raspberry Pi via crontab.
 
 Based on https://www.hackster.io/adamgarbo/raspberry-pi-2-iot-thingspeak-dht22-sensor-b208f4
 
@@ -25,7 +25,8 @@ You'll need a ThingSpeak channel, so [go create one](http://thingspeak.com).
 Name your channel whatever you like.
 Field 1 is for temperature, so name apropriately.
 Field 2 is for humidity, so name apropriately.
-Remember that there's no need for a timestamp channel, as it is recorded in each «field»
+Field 3 is for temperature of the Pi itself, so name apropriately.
+Remember that there's no need for a timestamp channel, as it is recorded on each submission.
 
 Then there's time to install this simple snippet of code.
 
