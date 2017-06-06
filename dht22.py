@@ -9,6 +9,8 @@ Modified again by Fredrik Mandal on June 6, 2017
 import sys
 import Adafruit_DHT
 import urllib2
+import subprocess
+
 
 myAPI = "<API KEY>"
 pin = 4
@@ -19,8 +21,13 @@ def getSensorData():
    return RH, T
 
 def sendToThingSpeak(RH, T):
+   coreCommand = "/opt/vc/bin/vcgencmd measure_temp"
+   process = subprocess.Popen(coreCommand.split(), stdout=subprocess.PIPE)
+   coreTmp, error = process.communicate()
+   coreTemp = str(coreTmp)[5:-3]
+   print "Coretemp: %s" % (coreTemp)
    baseURL = 'https://api.thingspeak.com/update?api_key=%s' % myAPI
-   callURL = baseURL + "&field1=%s&field2=%s" % (str(T), str(RH))
+   callURL = baseURL + "&field1=%s&field2=%s&field3=%s" % (str(T), str(RH), coreTemp)
    f = urllib2.urlopen(callURL)
    res = f.read()
    f.close()
