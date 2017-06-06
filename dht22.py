@@ -10,7 +10,7 @@ import sys
 import Adafruit_DHT
 import urllib2
 
-myAPI = "RIECGPK9X7DSKV2G"
+myAPI = "<API KEY>"
 pin = 4
 
 def getSensorData():
