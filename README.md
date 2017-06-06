@@ -15,7 +15,8 @@ Then run
 to install needed libraries.
 
 Then install the [Adafruit Python DHT library](https://github.com/adafruit/Adafruit_Python_DHT):
-```git clone https://github.com/adafruit/Adafruit_Python_DHT.git 
+```
+git clone https://github.com/adafruit/Adafruit_Python_DHT.git 
 cd Adafruit_Python_DHT 
 sudo python setup.py install
 ```
@@ -32,16 +33,19 @@ Then there's time to install this simple snippet of code.
 
 Update with your API key and pin number for the DHT22:
 
-```cd dht22
+```
+cd dht22
 nano dht22.py
 ```
 
 Change the config variables to reflect your values:
-```myAPI = "<API FROM THINGSPEAK>"
+```
+myAPI = "<API FROM THINGSPEAK>"
 pin = 4
 ```
 
 If you'd like it to run every 5 minutes do so via crontab:
-```crontab -e 
+```
+crontab -e 
 */5 * * * * python /home/pi/dht22/dht22.py > /dev/null
 ```
